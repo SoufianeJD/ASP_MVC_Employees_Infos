@@ -1,0 +1,163 @@
+﻿html {
+
+    font-family: Open Sans;
+    font-size: 16px;
+    margin: 0 2em;
+    word-wrap: break-word;
+}
+
+.exposure-calculator {
+    background-color: white;
+    border: 4px double black;
+    max-width: 70%;
+    margin: 0.75rem auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.box {
+    background-color: white;
+    border: 4px double black;
+    width: 900px;
+    height: 300px;
+    /* max-width: 70%; */
+    margin: 0.75rem auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.exposure-page-title {
+    color: #69c;
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 1px 1px black, 2px 2px black;
+    text-transform: uppercase;
+}
+
+.exposure-property {
+    display: block;
+}
+
+.exposure-property-title {
+    margin-bottom: .25em;
+}
+
+.exposure-property .exposure-property-title {
+    text-align: center;
+}
+
+.exposure-border {
+    border-style: double;
+    margin: 1em 0;
+}
+
+select {
+    background-color: #efefef;
+    font-size: 1.5em;
+}
+
+.full-stop {
+    background-color: #fff;
+    font-size: 1.0125em;
+    font-weight: 900;
+}
+
+.third-stop {
+    color: #333;
+}
+
+button {
+    margin-top: 1em;
+}
+
+.submitButton,
+.ev-holder,
+.actual-exposure-holder,
+.exposure-settings-holder,
+.actual-exposure-information,
+.updated-exposure-information,
+select {
+    width: 100%;
+}
+
+.submitButton {
+    font-size: 1.125em;
+    font-weight: 700;
+    height: 2.5em;
+    line-height: 1;
+    margin: 2em 0 1em;
+}
+
+.actual-exposure-holder,
+.camera-settings-holder {
+    display: block;
+}
+
+    .actual-exposure-holder .exposure-property-title,
+    .camera-settings-holder .exposure-property-title,
+    .nd-filter-holder .exposure-property-title {
+        font-size: 1em;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+.equivalent-values,
+.actual-exposure-information span,
+.updated-exposure-information span {
+    font-weight: 900;
+    line-height: 1;
+}
+
+.equivalent-values {
+    display: inline-block;
+    line-height: 1;
+    width: 48%;
+}
+
+    .equivalent-values:nth-child(1) {
+    }
+
+    .equivalent-values:nth-child(2) {
+        float: right;
+        margin-left: 1%;
+        text-align: right;
+    }
+
+.exposure-value-title {
+    color: #666;
+}
+
+.exposure-value {
+    color: #6699cc;
+    font-size: 2em;
+}
+
+.actual-exposure-information,
+.updated-exposure-information {
+    display: inline-block;
+    line-height: 1.5;
+    width: 32%;
+}
+
+    .actual-exposure-information span,
+    .updated-exposure-information span {
+        display: block;
+    }
+
+    .actual-exposure-information:nth-child(3n+2),
+    .updated-exposure-information:nth-child(3n+2) {
+        float: left;
+        text-align: left;
+    }
+
+    .actual-exposure-information:nth-child(3n+0),
+    .updated-exposure-information:nth-child(3n+0) {
+        text-align: center;
+    }
+
+    .actual-exposure-information:nth-child(3n+1),
+    .updated-exposure-information:nth-child(3n+1) {
+        float: right;
+        text-align: right;
+    }

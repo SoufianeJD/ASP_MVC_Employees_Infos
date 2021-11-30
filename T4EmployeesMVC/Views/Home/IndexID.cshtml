@@ -1,0 +1,83 @@
+﻿@model T4EmployeesMVC.Models.user
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Masthead -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image -->
+        <img style=" border-radius: 50%" class="masthead-avatar mb-5" src="@ViewBag.image" onerror="this.src='../Profileimg/logoempl.gif'" alt="">
+        <!-- Masthead Heading -->
+        <h1 class="masthead-heading text-uppercase mb-0">BienVenue @ViewBag.user</h1>
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading -->
+        <p class="masthead-subheading font-weight-light mb-0">Pour une meilleure gestion</p>
+    </div>
+</header>
+<!-- Portfolio Section -->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Consulter vos documents</h2>
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items -->
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+
+                        <img src="~/Images/cheque.jpg" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Paychecks </h5>
+                            <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;Consult your paycheck's history.</p>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="Paychequelist" class="btn btn-primary">View</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+
+                        <img src="~/Images/testlogo.png" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Revele 1</h5>
+                            <p class="card-text"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consult your Releve 1 file.</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="Releve1List" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/Images/t4logo.png" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">&nbsp;&nbsp;&nbsp;T4 Document</h5>
+                            <p class="card-text"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consult your T4 file.</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="T4List" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section -->

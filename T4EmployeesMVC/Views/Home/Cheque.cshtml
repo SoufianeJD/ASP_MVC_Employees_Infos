@@ -1,0 +1,232 @@
+﻿@using T4EmployeesMVC.Models
+@{
+    ViewBag.Title = "profil";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+
+
+<link href="~/Content/Style2.css" rel="stylesheet" />
+
+<div id="parentDiv">
+
+    <div id="parentDiv" class="container">
+        <br />  <br />  <br />  <br />  <br />
+        <div class="row">
+            
+
+            <div class="col-6">
+                <img src="~/Images/logocommi.jpg" style="height: 30px; width: 215px" /><br />
+                Kingston & Region Division<br />Canadian Corps of Commissionaires<br />737 Arlington Park Place, Kingston, ON K7M 8M8<br /> 613-634-4432 x 107
+            </div>
+            <div class="col-6">
+                @{
+                    var data = ViewBag.Message;
+                }
+                DIRECT DEPOSIT ADVICE / AVIS DÉPÔT DIRECT<br />
+                <div class="test">
+                    <table>
+                        <tr>
+                            <th>DATE</th>
+                            <th>No. D'EMPLOYE</th>
+                            <th>No.DE CHEQUE</th>
+                    
+                        </tr>
+                        <tr>
+                            <td>@Html.ViewData["Chq-dte"]</td>
+                            <td>@Html.ViewData["Empl-no"]</td>
+                            <td>@Html.ViewData["Chq-no"]</td>
+
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>DIRECT DEPOSIT AMOUNT / MONTANT DEPOT DIRECT</th>
+
+                        </tr>
+                        <tr>
+
+                            <td>$*****@Html.ViewData["Net"]</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <br /> <br />
+
+
+        <div class="row">
+            <div class="col-4">
+                @Html.ViewData["Addr-1"]<br /> @Html.ViewData["Addr-2"]<br /> @Html.ViewData["Postal-code"]
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+        <br /> <br />
+        <div class="test">
+
+
+            <div class="row">
+                <div class="col-7">
+                    <img src="~/Images/logocommi.jpg" style="height: 30px; width: 215px" /><br />
+                </div>
+                <div class="col-5">
+                    EMPLOYEE STATEMENT OF LEARNING AND DEDUCTIONS<br />RELEVE DES GAINS ET RETENUS DE L'EMPLOYE
+                </div>
+
+            </div>
+            <br /> <br />
+
+            <div class="row">
+                <div class="col-8">
+                    <div class="test">
+                        <table>
+                            <tr>
+                                <th>EARNINGS<br /> GAINS</th>
+                                <th>WEEK<br /> SEMAINE</th>
+                                <th>RATE<br /> TAUX</th>
+                                <th>HOURS<br /> HEURS</th>
+                                <th>CURRENT PERIOD<br />PERIODE COURANTE</th>
+                            </tr>
+
+                            <tr>
+                                <td>Heures regulieres <br />Heures regulieres<br />Ajustements / retro<br /> Jour ferie<br />Avant.Fed.DMA/Vie<br />Avant.Prov.Maladie<br />Avant.Prov.DMA/Vie</td>
+
+                                <td>00 <br />00<br />00<br />00<br />00<br />00<br />00</td>
+
+                                <td> 1<br />@Html.ViewData["yh-hrs"]<br />@Html.ViewData["Hrxxxs"]<br />00<br />00<br />00<br />00</td>
+                                <td>00 <br />00<br />00<br />00<br />00<br />00<br />00</td>
+                                <td>00 <br />00<br />00<br />00<br />00<br />00<br />00</td>
+                            </tr>
+
+                        </table>
+                        <br />
+                        <br />
+                        Voici l'adresse courriel inscrite a votre dossier:
+                        <br />
+                        @Html.ViewData["E-mail-addr"]<br /><br />
+                        Svp, signaler tout changement a :<br />
+                        @Html.ViewData["E-mail-addr2"]<br /><br />
+                    </div>
+                </div>
+                <div class="col-4">
+
+                    <div class="test">
+                        <table>
+                            <tr>
+                                <th>DEDUCTIONS<br /> DEDUCTIONS</th>
+                                <th>CURRENT<br /> COURANT</th>
+                                <th>Y.T.D<br /> CUM.AN.</th>
+
+                            </tr>
+                            <tr>
+                                <td>Impot federal<br />Impot provincial<br />Assurance emploi<br />Regime rentres QC<br />Impot fed. suppl<br />Impot prov. suppl<br />RQAP<br />Ass.coll.employe</td>
+                                <td>@Html.ViewData["E-mail-addr"] <br />00<br />00<br />00<br />00<br />00<br />00<br />00</td>
+                                <td>00 <br />00<br />00<br />00<br />00<br />00<br />00<br />00</td>
+
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <br />
+
+
+
+            <div class="test">
+                <table>
+                    <tr>
+                        <th>PAY PERIOD / PERIODE DE PAIE</th>
+                        <th>TOTAL GROSS / MONTANT DES GAINS</th>
+                        <th>TOTAL DEDUCTION / DEDUCTIONS TOTALES</th>
+                        <th>NAT PEY / PAIE NETTE</th>
+
+                    </tr>
+                    <tr>
+                        <td>05/09/2021 | 05/22/2021</td>
+                        <td>1,586.40</td>
+                        <td>344.91</td>
+                        <td>$@Html.ViewData["Net"]</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <br />
+
+
+
+
+        <div class="test">
+            <table>
+                <tr>
+                    <th>NAME<br /> NOM</th>
+                    <th>EMPLOYEE # / No. D'EMPLOYE</th>
+                    <th>SECTION # / No. De SECTION</th>
+                    <th>CHEQUE # / No. DE CHEQUE</th>
+
+                </tr>
+                <tr>
+                    <td>@Html.ViewData["Empl-name"]</td>
+                    <td>@Html.ViewData["Empl-no"]</td>
+                    <td>F4A09001</td>
+                    <td>@Html.ViewData["Chq-no"]</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+
+
+
+
+        <br />
+
+
+
+        <div class="test">
+            <table>
+                <tr>
+                    <th>CUM.REVENUS</th>
+                    <th>UNIFORM BALANCE</th>
+                    <th>SOLD DE CONGE ANNUEL</th>
+                    <th>CONGE PROCHAINE ANNEE</th>
+                    <th>CONGE DE MALADIE Hr/$</th>
+
+                </tr>
+                <tr>
+                    <td>-410.91</td>
+                    <td>-410.91</td>
+                    <td>-410.91</td>
+                    <td>-410.91</td>
+                    <td>-410.91</td>
+
+
+                </tr>
+
+            </table>
+
+
+        </div>
+        <a id="printPDF" class="btn btn-primary">Print</a>
+    </div>
+</div>
+<br />
+<br />

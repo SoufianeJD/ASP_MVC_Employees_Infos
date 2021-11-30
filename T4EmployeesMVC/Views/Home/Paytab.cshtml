@@ -1,0 +1,98 @@
+﻿@model T4EmployeesMVC.Models.user
+@{
+    ViewBag.Title = "Paytab";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+@if (Session["id"] != null)
+{
+<link href="~/Content/Paystyle.css" rel="stylesheet" />
+<br /><br /><br /><br /><br />
+                        <div class="box">
+                            <h1 class="exposure-page-title">@ViewBag.user  @Html.ViewData["Empl-no"] Payments infos</h1>
+                            <div class="exposure-property-holder">
+                                <div id="aperture" class="exposure-property">
+                                    <h3 class="exposure-property-title">Num Cheque:</h3>
+                                    <select name="aperture-value" id="aperture-value">
+
+                                        <option value="1" class="full-stop"> @Html.ViewData["Chq-no"]</option>
+                                        <option value="2" class="full-stop"> @Html.ViewData["Chq-no"]</option>
+                                        <option value="3" class="full-stop"> @Html.ViewData["Chq-no"]</option>
+
+                                    </select>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="exposure-border"></div>
+
+                            <div class="actual-exposure-holder">
+
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Semaine: @Html.ViewData["Week-no"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Date-Cheque: @Html.ViewData["Chq-dte"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Brut: @Html.ViewData["Net"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Frequentation: @Html.ViewData["Freq"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Times print: @Html.ViewData["Times-print"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Company: @Html.ViewData["Company"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Departement: @Html.ViewData["Dep"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Gross: @Html.ViewData["Gross"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Wk-apply: @Html.ViewData["Wk-apply"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">PPIP-$: @Html.ViewData["PPIP-$"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Type: @Html.ViewData["Type"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Wk-Apply: @Html.ViewData["Wk-apply"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Insbl-$: @Html.ViewData["Insbl-$"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Pnsbl-$: @Html.ViewData["Pnsbl-$"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                                <div class="actual-exposure-information">
+                                    <span class="exposure-value-title">Prnbtl: @Html.ViewData["Prntbl"]</span>
+                                    <span class="exposure-value" id="actual-iso-value"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+}

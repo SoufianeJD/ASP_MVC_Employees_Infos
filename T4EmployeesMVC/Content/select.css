@@ -1,0 +1,197 @@
+﻿body {
+    background: #fcfcfc;
+    text-align: center;
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+em {
+    color: #ccc;
+}
+
+strong {
+    color: #666;
+}
+
+.icon,
+.icon-before:before,
+.icon-after:after {
+    font: normal 1.5em/1 'Noticons';
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    vertical-align: top;
+}
+
+#bar-date {
+    margin-top: 6em;
+}
+/* Mini menu */
+.links-select,
+.links-select-label {
+    position: relative;
+    height: 2.65em;
+    line-height: 2.65em;
+    background: #f1f1f1;
+    color: #838383;
+}
+
+.links-select {
+    display: inline-block;
+    z-index: 50;
+    margin: .5em 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.links-select-label {
+    display: block;
+    position: relative;
+    padding: 0 2.5em;
+    margin-top: -2.65em;
+    cursor: default;
+}
+
+    .links-select-label:before,
+    .links-select-label:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1.77em;
+        height: 1.77em;
+        line-height: 1.77;
+    }
+
+    .links-select-label:before {
+        content: '\f429';
+        display: none;
+        color: rgb(91, 155, 195);
+    }
+
+    .links-select-label:after {
+        content: '\f431';
+    }
+
+    .links-select-label:focus:before {
+        display: block;
+    }
+
+    .links-select-label:focus:after,
+    .links-select:hover .links-select-label:after {
+        display: none;
+    }
+
+.links-select-list {
+    position: relative;
+    z-index: 50;
+    display: block;
+    max-height: 13em;
+    padding-top: 2.65em;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #f7f7f7;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.links-select:hover .links-select-list {
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.links-select-item {
+    position: relative;
+    display: block;
+    height: 1px;
+    margin-top: -1px;
+    border: 1px solid #e3e3e3;
+    border-width: 0 1px;
+    background: #fff;
+    color: #666;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-transition: height .3s ease-in-out, opacity .3s ease-in-out, margin-top .3s ease-in-out;
+    -moz-transition: height .3s ease-in-out, opacity .3s ease-in-out, margin-top .3s ease-in-out;
+    -o-transition: height .3s ease-in-out, opacity .3s ease-in-out, margin-top .3s ease-in-out;
+    transition: height .3s ease-in-out, opacity .3s ease-in-out, margin-top .3s ease-in-out;
+}
+
+    .links-select-item:focus,
+    .links-select:hover .links-select-item {
+        height: 2.65em;
+        border-width: 1px;
+        opacity: 1;
+    }
+
+    .links-select-item:focus,
+    .links-select:hover .links-select-label + .links-select-item {
+        margin-top: -2.65em;
+        -webkit-transition: opacity .3s ease-in-out, margin-top .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out, margin-top .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out, margin-top .3s ease-in-out;
+        transition: opacity .3s ease-in-out, margin-top .3s ease-in-out;
+    }
+
+.links-select:hover .links-select-item {
+    margin-top: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+    .links-select .links-select-item + .links-select-item,
+    .links-select:hover .links-select-item + .links-select-item:focus {
+        border-top-width: 0;
+    }
+
+        .links-select .links-select-item + .links-select-item:focus {
+            border-width: 1px;
+        }
+
+.links-select-label:hover,
+.links-select-label:focus,
+.links-select-item:hover,
+.links-select-item:focus {
+    background: #f7f7f7;
+    text-decoration: none;
+}
+
+.links-select-current-item {
+    background: #5A9AC3;
+    color: #fff;
+}
+
+    .links-select-current-item:hover,
+    .links-select-current-item:focus {
+        background: #3E6C89;
+    }
+
+.links-select-skip {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: .44em;
+    width: 1.3em;
+    line-height: 1.77;
+}
+
+    .links-select-skip:before {
+        content: '\f430';
+        width: .5em;
+        color: rgb(91, 155, 195);
+    }
+
+    .links-select-skip:focus {
+        right: -1.33em;
+    }

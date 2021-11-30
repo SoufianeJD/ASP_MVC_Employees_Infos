@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/select.css" rel="stylesheet" />
+</head>
+<body>
+    <br /><br />
+    @using (Html.BeginForm("Releve1", "Home", FormMethod.Post))
+    {
+        <p id="bar-date">
+            <strong>Revele 1 Archives</strong><br />
+            <span class="links-select" role="navigation">
+                <span class="links-select-list" role="menu">
+                    <a class="links-select-label icon-before icon-after" aria-haspopup="true" id="go-back" href="#skip" title="Press Enter to skip" rel="nofollow" role="menuitem">Select the year</a>
+
+
+                    @foreach (var d in Model)
+                    {
+
+                        <a href="@Url.Action("Releve1", "Home", new {@param_emplno=@d.emplno,@param_username=@d.username,@param_year=@d.years})" onclick="document.forms[0].submit();" class="links-select-item" role="menuitem">@d.years</a>
+                    }
+
+                </span>
+                <a class="links-select-skip icon-before" id="skip" href="#go-back" title="Tab to continue, or press Enter to go back to the beginning" rel="nofollow"></a>
+            </span>
+        </p>
+
+        @Html.Raw(TempData["Embed"])
+
+    }
+
+    <script src="~/Scripts/MyScript.js"></script>
+</body>
+</html>

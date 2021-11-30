@@ -1,0 +1,174 @@
+﻿@model T4EmployeesMVC.Models.user
+@{
+    ViewBag.Title = "profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (Session["id"] != null)
+{
+
+
+
+
+
+
+
+    <div style="margin-top:8%" class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+
+                    <img src="~/Images/logoindex.png" />
+
+               
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h5>
+              
+                    </h5>
+                    <h6>
+                    </h6>
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+
+
+
+                    <p>Empl-no :    @Html.ViewData["Empl-no"]</p>
+                    <p>Company :    @Html.ViewData["Company"]</p>
+                    <p>Business:    @Html.ViewData["business"]</p>
+
+
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Full name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.ViewData["Last-name"]  @Html.ViewData["First-name"]</p>
+
+                            </div>
+                        </div>
+                     
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.ViewData["EmailAddress"]</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Adresse</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.ViewData["Addr-1"]  @Html.ViewData["Addr-2"]  @Html.ViewData["Postal-code"]</p>
+                            </div>
+                        </div>
+                   
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Level</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.ViewData["Level"]</p>
+                            </div>
+                        </div>
+                
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Salary</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.ViewData["Salary"]</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Password</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>********</p>
+
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Edit Password
+                        </button>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+    @using (Html.BeginForm("Updatepw", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit your password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>@Html.ViewData["Passwrd"]</p>
+                        @Html.TextBoxFor(model => model.Passwrd, new { @type = "password", @class = "form-control" })
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         
+        }
+    

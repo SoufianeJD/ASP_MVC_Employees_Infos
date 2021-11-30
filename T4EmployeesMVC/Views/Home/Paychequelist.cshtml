@@ -1,0 +1,43 @@
+﻿@if (Session["id"] != null)
+{
+
+<link href="~/Content/Paytable.css" rel="stylesheet" />
+
+                <div id="wrapper">
+                    <h1>@ViewBag.user's Paycheque list</h1>
+
+                    <table id="keywords" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th><span>N-CHQ</span></th>
+                                <th><span>SEMAINE</span></th>
+                                <th><span>DEPARTEMENT</span></th>
+                                <th><span>NET</span></th>
+                                <th><span>BRUT</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var d in Model)
+                            {
+                            <tr>
+                                <td>   <a class="lalign" href="@Url.Action("Cheque", "Home", new {@param_nchq=@d.nchq,@param_emplno=@d.emplno})"> @d.nchq</a></td>
+
+                                <td>@d.semaine</td>
+                                <td>@d.dep</td>
+                                <td>@d.net</td>
+                                <td>@d.pnsb</td>
+                          
+
+
+
+                            </tr>}
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+}
+
+
